@@ -1,0 +1,30 @@
+*** tests/A-04-01-M-ok.out	2019-11-20 13:30:59.000000000 +0000
+--- tests/A-04-01-M-ok.outhyp	2019-12-03 10:33:20.415936754 +0000
+***************
+*** 18,36 ****
+  2 - Mostrar todas as obras
+  3 - Efectuar pesquisa de termos
+  0 - Sair
+! Escolha uma opção: Introduza o número da obra: Mostrar obra: Operação inválida: A obra -1 não existe.
+! Menu de obras
+! 1 - Mostrar obra
+! 2 - Mostrar todas as obras
+! 3 - Efectuar pesquisa de termos
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+! 0 - Sair
+! Escolha uma opção: 
+\ No newline at end of file
+--- 18,21 ----
+  2 - Mostrar todas as obras
+  3 - Efectuar pesquisa de termos
+  0 - Sair
+! Escolha uma opção: Introduza o número da obra: 
+\ No newline at end of file
