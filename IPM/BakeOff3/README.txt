@@ -1,2 +1,0 @@
-O nosso teclado é baseado na ideia do ZoomBoard em que o primeiro toque serve a penas para dar zoom numa certa zona do teclado e depois pressiona-se a tecla pretendida.
-A parte superior do ecrã mostra que tecla o dedo está a dar "hover".
