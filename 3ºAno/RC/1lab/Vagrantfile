@@ -1,0 +1,57 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile for RC Lab 01 - Web applications and HTTP
+
+Vagrant.configure("2") do |config|
+  # ensure required Vagrant Plugins installed
+  config.vagrant.plugins = ["vagrant-vbguest"]
+  # Always use Vagrant's default insecure key
+  config.ssh.insert_key = false
+  # Always use X11 Forwarding with r+this machine
+  config.ssh.forward_x11 = true
+  # To avoid/allow install and uninstall of VBoxGuessAdditions.
+  config.vbguest.auto_update = true
+  # Disable/enable automatic box update checking.
+  config.vm.box_check_update = false
+
+
+  # Create an instance
+  # Assign a friendly name for vagrant STATUS
+  config.vm.define "webserver" do |web_config|
+    # Every Vagrant development environment requires a box.
+    web_config.vm.box = "ubuntu/xenial64"
+    # Assign a friendly name to this host VM
+    web_config.vm.hostname = "webserver"
+    # Create a private network, which allows host-only access to the machine
+    web_config.vm.network "private_network", ip: "192.168.56.21"
+    # Configure the Forward port to access the server from the host
+    web_config.vm.network "forwarded_port", guest: 80, host: 8080
+    # Provider-specific configuration so you can fine-tune various
+    web_config.vm.provider "virtualbox" do |vb|
+      # Change the VM name/ID in the Hypervisor
+      vb.name = "webserver"
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      vb.memory = 512
+    end # of vb
+    # Configurev the shared folders between the host and the VM
+    if Vagrant::Util::Platform.windows? then
+      # Configuration SPECIFIC for Windows 10 hosts
+      web_config.vm.synced_folder "html", "/home/vagrant/html", type: "rsync",
+      id: "vagrant-root", owner: "vagrant", group: "vagrant",
+      mount_options: ["dmode=775, fmode=777"]
+    else
+      # Configuration for Nix hosts
+      web_config.vm.synced_folder "html", "/home/vagrant/html",
+      mount_options: ["dmode=775, fmode=777"]
+    end
+    web_config.vm.provision "shell", path: "bootstrap_web.sh"
+  end # of  web_config
+
+  # Create an new instance
+  # insert your instructions here:
+  # config.vm.define "client" do |client_config|
+
+  # end # of client_config
+
+end # of  config
