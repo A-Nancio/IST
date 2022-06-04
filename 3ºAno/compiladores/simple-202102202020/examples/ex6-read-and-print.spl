@@ -1,0 +1,9 @@
+-- $Id: ex6-read-and-print.spl,v 1.1 2014/05/02 22:33:16 david Exp $
+-- Leitura e escrita.
+--
+begin
+  x=0;
+  read x;
+  x=x+12;
+  print x;
+end

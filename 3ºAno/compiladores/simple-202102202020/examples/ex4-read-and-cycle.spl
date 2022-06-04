@@ -1,0 +1,14 @@
+-- $Id: ex4-read-and-cycle.spl,v 1.1 2014/05/02 22:33:16 david Exp $
+-- Ciclo de impressão.
+--
+begin
+  n = 0;
+  y = 0;
+  x = 0;
+  read y;  -- pede número
+  read n;  -- pede número
+  while (x <= y) {
+    print x;
+    x = x + n;
+  }
+end
