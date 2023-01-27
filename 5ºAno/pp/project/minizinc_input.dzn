@@ -1,0 +1,15 @@
+adjancecy_list = [|1,1,0,0,0,
+                  |1,1,1,0,1,
+                  |0,1,1,1,0,
+                  |0,0,1,1,0,
+                  |0,1,0,0,1|];
+
+start_states = [1,2,5];
+
+goal_states = [5,2,1];
+
+makespan_size = 9;
+
+num_vertices = 5;
+
+num_agents = 3;

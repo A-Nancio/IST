@@ -1,0 +1,12 @@
+# Example comment line
+4
+START:
+1 1
+2 5
+3 7
+4 11
+GOAL:
+1 3
+2 6
+3 9
+4 13

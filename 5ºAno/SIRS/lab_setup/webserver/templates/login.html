@@ -1,0 +1,28 @@
+<html>
+  <title>Log in</title>
+  <body style="padding:20px">
+    <h1>
+      <a href="/">MusikMarkt</a>
+    </h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <h2>
+      Log in:
+    </h2>
+    <form method="post" action="/login">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+      <input type="text" id="password" name="password"><br>
+      <input type="submit" value="Log in">
+    </form>
+    <h2><a href="create_account">Criar conta</a></h2>
+  </body>
+</html> 

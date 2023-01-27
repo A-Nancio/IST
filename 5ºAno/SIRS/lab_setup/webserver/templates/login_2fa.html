@@ -1,0 +1,30 @@
+
+<html>
+    <title>Two factor authentication</title>
+    <body style="padding:20px">
+      <h1>
+        <a href="/">MusikMarkt</a>
+      </h1>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      {% for category, message in messages %}
+      <div class="alert alert-{{ category }}" role="alert">
+        {{ message }}
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      <h2>
+        Two-factor authentication
+      </h2>
+      <p>A pin code should have been sent to a device in your posession with the key code necesary to log in to MusicMarkt services,
+        please inser the 6 digit PIN code below:
+      </p>
+      <form method="post" action="/login/2fa/">
+        <label for="pin">authentication code:</label><br>
+        <input type="text" id="pin" name="pin"><br>
+        <input type="submit" value="Authenticate">
+      </form>
+      <h2><a href="/">Return</a></h2>
+    </body>
+    </html> 

@@ -1,0 +1,8 @@
+chkcpf.o: chkcpf.cc common.hh toolcfg.hh cpf_config.hh cpf_graph.hh \
+ cpf_scenario.hh cpf_solution.hh cpf_checker.hh
+cpf_checker.o: cpf_checker.cc common.hh cpf_checker.hh cpf_config.hh \
+ cpf_graph.hh cpf_scenario.hh cpf_solution.hh
+cpf_config.o: cpf_config.cc cpf_config.hh
+cpf_graph.o: cpf_graph.cc cpf_graph.hh common.hh cpf_config.hh
+cpf_scenario.o: cpf_scenario.cc cpf_scenario.hh common.hh cpf_config.hh
+cpf_solution.o: cpf_solution.cc cpf_solution.hh common.hh cpf_config.hh

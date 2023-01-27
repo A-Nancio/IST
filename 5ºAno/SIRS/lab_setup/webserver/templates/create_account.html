@@ -1,0 +1,29 @@
+<html>
+  <title>Consultar - Flask</title>
+  <body style="padding:20px">
+    <h1>
+      <a href="/">MusikMarkt</a>
+    </h1>
+    <h2>
+      Create account:
+    </h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <form method="post" action="/create_account">
+      <label for="username">User name:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+      <input type="text" id="password" name="password"><br>
+      <label for="phone_nr">Phone number:</label><br>
+      <input type="text" id="phone_nr" name="phone_nr"><br><br>
+      <input type="submit" value="Create account">
+    </form>
+  </body>
+  </html> 
