@@ -1,0 +1,15 @@
+0   1   0   eps
+1   2   1   Jan
+1   2   2   Feb
+1   2   3   Mar
+1   2   4   Apr
+1   2   5   May
+1   2   6   Jun
+1   2   7   Jul
+1   2   8   Aug
+1   2   9   Sep
+0   3   1   eps
+3   2   0   Oct
+3   2   1   Nov
+3   2   2   Dec
+2

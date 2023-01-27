@@ -1,0 +1,12 @@
+0   1   0   eps
+0   1   1   eps
+0   1   2   eps 
+0   1   3   eps
+0   1   4   eps
+0   1   5   eps
+0   1   6   eps
+0   1   7   eps
+0   1   8   eps
+0   1   9   eps
+0   1   /   eps
+1
